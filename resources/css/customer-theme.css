@@ -1,0 +1,85 @@
+:root {
+  --primary-color: #1e40af !important; /* blue-800 */
+  --secondary-color: #3b82f6 !important; /* blue-500 */
+  --accent-color: #60a5fa !important; /* blue-400 */
+  --success-color: #1e40af !important; /* unify success to blue for customer pages */
+}
+
+/* Headings underline gradient */
+.page-title::after,
+h1::after {
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color)) !important;
+}
+
+/* Card headers use primary gradient */
+.table-card .card-header,
+.chart-card .card-header {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)) !important;
+  color: #fff !important;
+}
+
+/* Table header background */
+#datatablesSimple thead tr {
+  background: #eef2ff !important; /* indigo-50 */
+}
+
+/* Table header border and text */
+#datatablesSimple thead th {
+  color: #1e293b !important;
+  border-bottom: 2px solid #dbeafe !important;
+}
+
+/* Table row hover */
+#datatablesSimple tbody tr:hover {
+  background: linear-gradient(90deg, #eff6ff 0%, #dbeafe 100%) !important;
+  transform: scale(1.002) !important;
+  box-shadow: 0 2px 8px rgba(30, 64, 175, 0.12) !important;
+}
+
+/* Cards hover shadow */
+.table-card:hover,
+.chart-card:hover {
+  box-shadow: 0 8px 20px rgba(30, 64, 175, 0.12) !important;
+}
+
+/* Primary button and actions */
+.btn-primary,
+.btn-book-now,
+#btn-save {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)) !important;
+  border: none !important;
+  color: #fff !important;
+}
+
+.btn-primary:hover,
+.btn-book-now:hover,
+#btn-save:hover {
+  box-shadow: 0 10px 25px rgba(30, 64, 175, 0.3) !important;
+}
+
+/* Status badges normalized to blue family */
+.status-badge.status-ready {
+  background: #dbeafe !important; /* blue-100 */
+  color: #1e40af !important;
+}
+
+.status-badge.status-approval {
+  background: #bfdbfe !important; /* blue-200 */
+  color: #1e3a8a !important;
+}
+
+/* Track bookings green accents to blue */
+.page-title::after,
+.track-title::after {
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color)) !important;
+}
+
+/* Table header hover underline color */
+#datatablesSimple thead th::before {
+  background: var(--primary-color) !important;
+}
+
+/* Generic hover underline for table cells */
+#datatablesSimple tbody td::after {
+  background: var(--secondary-color) !important;
+}
