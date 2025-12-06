@@ -1,3 +1,53 @@
+# Swirl & Twist Laundry Shop
+
+Swirl & Twist is a Laravel-based multi-role web app (Admin, Staff, Customer) to manage laundry bookings, payments, equipment, and customer operations with a modern responsive UI.
+
+## Setup Instructions
+- Requirements: PHP 8.1+, Composer, Node 18+, MySQL (or compatible)
+- Clone and install
+  - composer install
+  - npm install
+- Environment
+  - Copy .env.example to .env and configure DB, APP_URL
+  - php artisan key:generate
+- Database
+  - php artisan migrate --seed (optional seeding if provided)
+- Run
+  - php artisan serve (backend)
+  - npm run dev (Vite dev) or npm run build (production)
+- Caches (if needed)
+  - php artisan config:clear && php artisan cache:clear && php artisan view:clear
+
+## Screenshots / Examples
+- Homepage: resources/views/welcome.blade.php (public landing)
+- Customer dashboard and sidebar: resources/views/layouts/NavigationPartials/
+- Profile page: resources/views/profile/edit.blade.php
+
+## Features (with CRUD mapping)
+- Bookings (Customer)
+  - Create: booking.create/store
+  - Read/List: booking.index, show
+  - Update: booking.edit/update
+  - Delete/Cancel: booking.cancel (custom) or destroy if implemented
+- Payments / Billings (Customer/Admin/Staff)
+  - billing.* and payment.* resource routes handle create/read/update; admin/staff approval routes manage workflow
+- Admin Management
+  - Services: service.* (CRUD)
+  - Equipments: equipment.* (CRUD)
+  - Users: user.* (CRUD)
+  - Booking approvals: confirmBooking.* (+ extra routes for rejected/cancelled, tracking)
+  - Payment approvals: adminPaymentApproval.* (and completed list)
+- Staff Operations
+  - Assigned bookings: assignedBooking.* (+ trackBookings)
+  - Equipment Monitoring: equipmentMonitoring.*
+
+## Code Structure
+- Backend: app/Http/Controllers, app/Models, routes/web.php, database/migrations|seeders
+- Frontend: resources/views (Blade), resources/css & resources/js (Vite), resources/img
+- Public web root: public/
+
+---
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
