@@ -94,12 +94,7 @@
                             <input type="hidden" name="hidden_image" id="hidden_image" >
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label for="image_link" class="col-sm-4 control-label">Or Image URL</label>
-                        <div class="col-sm-12">
-                            <input type="url" class="form-control" id="image_link" name="image_link" placeholder="https://example.com/image.jpg">
-                        </div>
-                    </div>
+                    <!-- Removed: Or Image URL field -->
                     <img id="modal-preview" src="https://via.placeholder.com/150" alt="Preview" class="form-group hidden" width="100" height="100" style="margin-top: 10px;">
                     <div class="col-sm-offset-2 col-sm-10">
                         <button type="submit" class="btn btn-primary" id="btn-save" style="margin-top: 10px;"></button>
@@ -192,13 +187,7 @@
             readURL(this); 
         });
 
-        $('#image_link').on('input', function(){
-            var val = $(this).val();
-            if (val && /^https?:\/\//i.test(val)) {
-                $('#modal-preview').attr('src', val).removeClass('hidden');
-                $('#image_url').val('');
-            }
-        });
+        // Removed: image_link URL preview handler
     });
 </script>
 

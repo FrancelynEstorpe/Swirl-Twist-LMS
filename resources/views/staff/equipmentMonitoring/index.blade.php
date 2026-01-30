@@ -3,8 +3,7 @@
 
 <div class="container">
     <h1>Equipments</h1>
-    <a href="javascript:void(0)" class="btn btn-info ml-3" id="create-new-equipment">Add New Equipment</a>
-    <br><br>
+<a href="javascript:void(0)" class="btn btn-info ml-3" id="create-new-equipment" style="display: none;">Add New Equipment</a>    <br><br>
     <div class="card mb-4">
         <div class="card-header">
             <i class="fas fa-table me-1"></i>

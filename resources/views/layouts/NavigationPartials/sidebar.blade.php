@@ -11,7 +11,7 @@
                         <div style="color: #fff; font-weight: 600; font-size: 15px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
                             {{ Auth::check() ? Auth::user()->name : '' }}
                         </div>
-                        <div style="color: #94a3b8; font-size: 13px;">
+                        <div style="color: #94a3b8; font-size: 16px;">
                             {{ Auth::check() ? Auth::user()->role : '' }}
                         </div>
                     </div>
